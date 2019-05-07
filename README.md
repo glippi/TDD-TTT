@@ -1,4 +1,4 @@
-<p style="text-align: center;">:vertical_traffic_light: :x: :o:</p>
+<p style="font-size: 30px; margin: 0 auto">:vertical_traffic_light: :x: :o:</p>
 
 # TDD-TTT
 >a fully Test Driven Development Tic-Tac-Toe experiment
