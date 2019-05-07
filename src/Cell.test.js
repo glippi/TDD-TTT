@@ -20,3 +20,15 @@ it('renders Cell element', () => {
   render(<Cell cellPosition="1" />, container);
   unmountComponentAtNode(container);
 });
+
+
+it('put an X if is clicked', () => {
+  act(() => {
+    render(<Cell />, container);
+  });
+  const aCell = container.querySelector('.cell');
+  act(() => {
+    aCell.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+  });
+  expect(aCell.textContent).toBe('X');
+});
