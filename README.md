@@ -1,6 +1,15 @@
-<p align="center" style="font-size: 60px"> :vertical_traffic_light: :x: :o:</p>
+<div align="center">
+<h1>TDD-TTT</h1>
 
-# TDD-TTT
+<a href="https://www.emojione.com/emoji/1f410">
+  <img
+    height="60"
+    width="60"
+    alt="tdd_circle"
+    src="https://raw.githubusercontent.com/TDD-TTT/master/other/tdd.png"
+  />
+</a>
+
 >a fully Test Driven Development Tic-Tac-Toe experiment
 
 ## Available Scripts
