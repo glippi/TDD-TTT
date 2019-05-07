@@ -13,7 +13,7 @@ export class Cell extends Component {
     const { cellPosition } = this.props
     const { sign } = this.state
 
-    const text = sign === '' ? cellPosition : sign
+    const text = sign || cellPosition
 
     return (
       <div className={`cell flex flex-row justify-center items-center w4 h4 ba cell`} onClick={this.signCell}>
