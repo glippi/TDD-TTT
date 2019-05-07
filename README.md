@@ -27,6 +27,7 @@
     src="https://github.com/glippi/TDD-TTT/blob/master/other/o.png"
    />
 </a>
+</div>
 
 >a fully Test Driven Development approach to Tic Tac Toe
 
