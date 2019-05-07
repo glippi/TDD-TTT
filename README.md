@@ -3,12 +3,11 @@
 
 <a href="https://www.emojione.com/emoji/1f410">
   <img
-    height="60"
-    width="60"
+    height="90"
+    width="90"
     alt="tdd_circle"
     src="https://github.com/glippi/TDD-TTT/blob/master/other/tdd.png"
-    src="https://raw.githubusercontent.com/TDD-TTT/master/other/tdd.png"
-  />
+   />
 </a>
 
 >a fully Test Driven Development Tic-Tac-Toe experiment
