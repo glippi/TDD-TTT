@@ -1,4 +1,6 @@
-#  :vertical_traffic_light: :x: :o: TDD-TTT
+<p style="text-align: center;">:vertical_traffic_light: :x: :o:</p>
+
+# TDD-TTT
 >a fully Test Driven Development Tic-Tac-Toe experiment
 
 ## Available Scripts
