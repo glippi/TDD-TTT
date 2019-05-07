@@ -1,4 +1,5 @@
 import React, { Component } from 'react' 
+import {Cell} from './Cell'
 
 export class Grid extends Component {
   render() {
@@ -16,6 +17,7 @@ export class Grid extends Component {
           <div className={`cell`}>8</div>
           <div className={`cell`}>9</div>
         </div>
+        <Cell cellPosition="1" />
       </div>
     )
   }
