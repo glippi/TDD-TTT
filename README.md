@@ -28,7 +28,7 @@
    />
 </a>
 
->a fully Test Driven Development Tic-Tac-Toe experiment
+>a fully Test Driven Development approach to Tic Tac Toe
 
 ## Available Scripts
 
