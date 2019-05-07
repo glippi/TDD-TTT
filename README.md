@@ -10,6 +10,24 @@
    />
 </a>
 
+<a href="https://www.joypixels.com/emoji/274c">
+  <img
+    height="80"
+    width="80"
+    alt="cross_mark"
+    src="https://github.com/glippi/TDD-TTT/blob/master/other/x.png"
+   />
+</a>
+
+<a href="https://www.joypixels.com/emoji/2b55">
+  <img
+    height="80"
+    width="80"
+    alt="hollow_red_circle"
+    src="https://github.com/glippi/TDD-TTT/blob/master/other/o.png"
+   />
+</a>
+
 >a fully Test Driven Development Tic-Tac-Toe experiment
 
 ## Available Scripts
