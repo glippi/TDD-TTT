@@ -1,4 +1,4 @@
-import React, { Component } from 'react' 
+import React, { Component } from 'react'
 
 export class Cell extends Component {
   state = {
@@ -11,9 +11,14 @@ export class Cell extends Component {
 
   render() {
     const { cellPosition } = this.props
+    const { sign } = this.state
+
+    const text = this.state.sign === '' ? cellPosition : this.state.sign
 
     return (
-      <div className={`cell`} onClick={this.signCell}>{this.state.sign === '' ? cellPosition : this.state.sign}</div>
+      <div className={`cell`} onClick={this.signCell}>
+        {sign}
+      </div>
     )
   }
-} 
+}
