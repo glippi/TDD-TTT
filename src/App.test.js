@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils';
+import App from './App';
 
 let container;
 
@@ -15,15 +15,20 @@ afterEach(() => {
   container = null;
 });
 
-it('renders without crashing', () => {
-  ReactDOM.render(<App />, container);
-  ReactDOM.unmountComponentAtNode(container);
-});
+describe('App component should', () => {
+  test('render without crashing', () => {
+    render(<App />, container);
 
-it('renders the Grid inside the App', () => {
-  act(() => {
-    ReactDOM.render(<App />, container);
+    unmountComponentAtNode(container);
   });
-  const grid = container.querySelector('.grid-wrapper');
-  expect(grid.textContent).toBe('I\'m a grid');
+
+  test('render the Grid', () => {
+    act(() => {
+      render(<App />, container)
+    });
+
+    const grid = container.querySelector('.grid-wrapper');
+
+    expect(grid.textContent).toBe('Tic Tac Toe');
+  });
 });

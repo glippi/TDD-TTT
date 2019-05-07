@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
-import { act } from 'react-dom/test-utils';
+import { act } from 'react-dom/test-utils'
 import { Grid } from './Grid'
 
 let container;
@@ -16,24 +16,20 @@ afterEach(() => {
 });
 
 
-it('renders Grid element', () => {
-  render(<Grid />, container);
-  unmountComponentAtNode(container);
-});
-
-
-it('Grid should have 9 divs', () => {
-  act(() => {
+describe('Grid component should', () => {
+  test('render without crashing', () => {
     render(<Grid />, container);
-  });
-  const cells = container.querySelectorAll('.cell');
-  expect(cells.length).toEqual(9);
-});
 
-it('cell ', () => {
-  act(() => {
-    render(<Grid />, container);
+    unmountComponentAtNode(container);
   });
-  const cells = container.querySelectorAll('.cell');
-  expect(cells.length).toEqual(9);
+
+  test('render 9 cells', () => {
+    act(() => {
+      render(<Grid />, container)
+    });
+
+    const cells = container.querySelectorAll('.cell');
+
+    expect(cells.length).toEqual(9);
+  });
 });
