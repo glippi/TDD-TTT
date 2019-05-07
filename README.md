@@ -3,8 +3,8 @@
 
 <a href="https://www.emojione.com/emoji/1f410">
   <img
-    height="90"
-    width="90"
+    height="120"
+    width="120"
     alt="tdd_circle"
     src="https://github.com/glippi/TDD-TTT/blob/master/other/tdd.png"
    />
