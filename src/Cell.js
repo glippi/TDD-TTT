@@ -6,7 +6,6 @@ export class Cell extends Component {
   }
 
   signCell = () => {
-    console.log('signCell')
     this.setState({ sign: "X" })
   }
 
@@ -17,8 +16,8 @@ export class Cell extends Component {
     const text = sign === '' ? cellPosition : sign
 
     return (
-      <div className={`cell`} onClick={this.signCell}>
-        {text}
+      <div className={`cell flex flex-row justify-center items-center w4 h4 ba cell`} onClick={this.signCell}>
+        <span className={``}>{text}</span>
       </div>
     )
   }
