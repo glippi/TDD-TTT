@@ -1,12 +1,12 @@
 <div align="center">
 <h1>TDD-TTT</h1>
 
-<a href="https://www.emojione.com/emoji/1f410">
+<a href="https://www.joypixels.com/emoji/1f6a6">
   <img
-    height="120"
-    width="120"
-    alt="tdd_circle"
-    src="https://github.com/glippi/TDD-TTT/blob/master/other/tdd.png"
+    height="80"
+    width="80"
+    alt="vertical_traffic_light"
+    src="https://github.com/glippi/TDD-TTT/blob/master/other/semaphore.png"
    />
 </a>
 
