@@ -27,6 +27,5 @@ it('Grid should have 9 divs', () => {
     render(<Grid />, container);
   });
   const cells = container.querySelectorAll('.cell');
-  console.log({ cells })
-  expect(cells).toEqual(9);
+  expect(cells.length).toEqual(9);
 });
