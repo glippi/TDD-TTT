@@ -23,14 +23,14 @@ describe('Player component should', () => {
     unmountComponentAtNode(container);
   });
 
-  it('show text Player 1', () => {
+  it('show actual player', () => {
     act(() => {
-      render(<Player />, container);
+      render(<Player whoIsPlaying={"player1"} />, container);
     });
 
-    const player1 = container.querySelector('.player1');
+    const player = container.querySelector('.player');
 
-    expect(player1.textContent).toBe('Player 1 moves');
+    expect(player.textContent).toBe('Player 1 moves');
   });
 
 });
