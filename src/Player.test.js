@@ -34,4 +34,3 @@ describe('Player component should', () => {
   });
 
 });
-
