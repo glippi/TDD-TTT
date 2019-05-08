@@ -51,6 +51,6 @@ describe('App component should', () => {
     const instance = app.getInstance();
     const { state } = instance
 
-    expect(state).toBeTruthy();
+    expect(state.actualPlayer).toBe("player1");
   });
 });
