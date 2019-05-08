@@ -5,7 +5,7 @@ import { Player } from './Player'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-row items-center justify-center">
       <Player />
       <Grid />
     </div>
