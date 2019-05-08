@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { Grid } from './Grid'
 import { Player } from './Player'
 
-function App() {
-  return (
+export default class App extends Component {
+  render() {
+    return (
     <div className="App flex flex-row items-center justify-center">
       <Player />
       <Grid />
     </div>
-  );
+    )
+  }
 }
-
-export default App;
