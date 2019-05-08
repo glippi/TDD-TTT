@@ -24,10 +24,17 @@ describe('Cell component should', () => {
 
     unmountComponentAtNode(container);
   });
+});
 
-  it('draw an X when clicked', () => {
+describe('Cell component when clicked should', () => {
+  it.each`
+    value
+    ${"1"}
+    ${"X"}
+    ${"O"}
+  `('draw $value if passed from props', ({ value }) => {
     act(() => {
-      render(<Cell cellValue="X" signBoard={()=>{}} />, container);
+      render(<Cell cellValue={value} signBoard={()=>{}} />, container);
     });
 
     const aCell = container.querySelector('.cell');
@@ -36,10 +43,10 @@ describe('Cell component should', () => {
       aCell.dispatchEvent(new MouseEvent('click', {bubbles: true}));
     });
 
-    expect(aCell.textContent).toBe('X');
-  });
+    expect(aCell.textContent).toBe(value);
+  })
 
-  it('call method signBoard on App component when clicked', () => {
+  it('call method signBoard on App component', () => {
     const app = create(<App />);
     const instance = app.getInstance();
     const spy = jest.spyOn(instance, 'signBoard');
