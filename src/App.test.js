@@ -31,4 +31,14 @@ describe('App component should', () => {
 
     expect(grid.textContent).toBe('Tic Tac Toe');
   });
+
+  test('render the Player', () => {
+    act(() => {
+      render(<App />, container)
+    });
+
+    const player = container.querySelector('.player');
+
+    expect(player).toBeTruthy();
+  });
 });
