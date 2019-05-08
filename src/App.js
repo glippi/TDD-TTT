@@ -6,7 +6,8 @@ import { Player } from './Player'
 export default class App extends Component {
   state = {
     grid: ["1","2","3","4","5","6","7","8","9"],
-    actualPlayer: "player1"
+    actualPlayer: "player1",
+    winner: ""
   }
 
   changePlayer = () => {
