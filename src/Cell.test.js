@@ -1,7 +1,9 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
-import { act } from 'react-dom/test-utils'
+import { create } from "react-test-renderer"
+import { act } from 'react-dom/test-utils';
 import { Cell } from './Cell'
+import App from './App'
 
 let container;
 
@@ -36,5 +38,24 @@ describe('Cell component should', () => {
 
     expect(aCell.textContent).toBe('X');
   });
+
+  it('change App state when clicked', () => {
+    act(() => {
+      render(<Cell />, container);
+    });
+
+    const aCell = container.querySelector('.cell');
+
+    act(() => {
+      aCell.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+    });
+
+    const app = create(<App />)
+    const instance = app.getInstance();
+    const { state: { actualPlayer } } = instance
+
+    expect(actualPlayer).toBe("player2");
+  });
+
 });
 
