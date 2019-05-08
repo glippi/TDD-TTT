@@ -5,7 +5,7 @@ import { Player } from './Player'
 
 export default class App extends Component {
   state = {
-    grid: [1,2,3,4,5,6,7,8,9],
+    grid: ["1","2","3","4","5","6","7","8","9"],
     actualPlayer: "player1"
   }
 
@@ -15,14 +15,21 @@ export default class App extends Component {
     this.setState({ actualPlayer: nextPlayer })
   }
 
+  signBoard = index => () => {
+    const { actualPlayer, grid } = this.state
+    const sign = actualPlayer === 'player1' ? 'X' : 'O'
+    grid.splice(index - 1, 1, sign) 
+    this.changePlayer()
+  }
+
   render() {
     const { grid, actualPlayer } = this.state
 
     return (
-    <div className="App flex flex-row items-center justify-center">
-      <Player whoIsPlaying={actualPlayer} />
-      <Grid grid={grid} changePlayer={this.changePlayer} />
-    </div>
+      <div className="App flex flex-row items-center justify-center">
+        <Player whoIsPlaying={actualPlayer} />
+        <Grid grid={grid} signBoard={this.signBoard} />
+      </div>
     )
   }
 }
