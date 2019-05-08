@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom'
+import { create } from "react-test-renderer"
 import { act } from 'react-dom/test-utils';
 import App from './App';
 
@@ -40,5 +41,16 @@ describe('App component should', () => {
     const player = container.querySelector('.player');
 
     expect(player).toBeTruthy();
+  });
+
+});
+
+describe('App component should', () => {
+  test('render the Player', () => {
+    const app = create(<App />)
+    const instance = app.getInstance();
+    const { state } = instance
+
+    expect(state).toBeTruthy();
   });
 });
