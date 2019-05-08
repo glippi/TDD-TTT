@@ -49,24 +49,24 @@ describe('Initial state of the App should', () => {
   test('start with player1', () => {
     const app = create(<App />)
     const instance = app.getInstance();
-    const { state } = instance
+    const { state: { actualPlayer } } = instance
 
-    expect(state.actualPlayer).toBe("player1");
+    expect(actualPlayer).toBe("player1");
   });
 
   test('start with grid of 9 elements', () => {
     const app = create(<App />)
     const instance = app.getInstance();
-    const { state } = instance
+    const { state: { grid }} = instance
 
-    expect(state.grid.length).toBe(9);
+    expect(grid.length).toBe(9);
   });
 
   test('start without a winner', () => {
     const app = create(<App />)
     const instance = app.getInstance();
-    const { state } = instance
+    const { state: { winner }} = instance
 
-    expect(state.winner).toBe("");
+    expect(winner).toBe("");
   });
 });
