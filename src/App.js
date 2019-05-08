@@ -9,9 +9,11 @@ export default class App extends Component {
   }
 
   render() {
+    const { actualPlayer } = this.state
+
     return (
     <div className="App flex flex-row items-center justify-center">
-      <Player />
+      <Player whoIsPlaying={actualPlayer} />
       <Grid />
     </div>
     )
