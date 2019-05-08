@@ -67,6 +67,6 @@ describe('Initial state of the App should', () => {
     const instance = app.getInstance();
     const { state } = instance
 
-    expect(state.grid.winner).toBe("");
+    expect(state.winner).toBe("");
   });
 });
