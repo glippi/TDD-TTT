@@ -24,14 +24,14 @@ afterEach(() => {
 
 describe('Grid component should', () => {
   test('render without crashing', () => {
-    render(<Grid grid={grid} />, container);
+    render(<Grid grid={grid} signBoard={()=>{}} />, container);
 
     unmountComponentAtNode(container);
   });
 
   test('render 9 cells', () => {
     act(() => {
-      render(<Grid grid={grid} />, container)
+      render(<Grid grid={grid} signBoard={()=>{}} />, container)
     });
 
     const cells = container.querySelectorAll('.cell');
