@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
-import { create, update } from 'react-test-renderer'
+import { create } from 'react-test-renderer'
 import { act } from 'react-dom/test-utils';
 import { Cell } from './Cell'
 import App from './App'
@@ -43,7 +43,6 @@ describe('Cell component should', () => {
     const app = create(<App />);
     const instance = app.getInstance();
     const spy = jest.spyOn(instance, 'signBoard');
-
 
     app.getInstance().signBoard();
 
