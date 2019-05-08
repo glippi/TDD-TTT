@@ -44,7 +44,7 @@ describe('Cell component should', () => {
     const instance = app.getInstance();
     const spy = jest.spyOn(instance, 'signBoard');
 
-    app.getInstance().signBoard();
+    instance.signBoard();
 
     expect(spy).toHaveBeenCalled();
     spy.mockRestore();
