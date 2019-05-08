@@ -45,12 +45,28 @@ describe('App component should', () => {
 
 });
 
-describe('App component should', () => {
-  test('render the Player', () => {
+describe('Initial state of the App should', () => {
+  test('start with player1', () => {
     const app = create(<App />)
     const instance = app.getInstance();
     const { state } = instance
 
     expect(state.actualPlayer).toBe("player1");
+  });
+
+  test('start with grid of 9 elements', () => {
+    const app = create(<App />)
+    const instance = app.getInstance();
+    const { state } = instance
+
+    expect(state.grid.length).toBe(9);
+  });
+
+  test('start without a winner', () => {
+    const app = create(<App />)
+    const instance = app.getInstance();
+    const { state } = instance
+
+    expect(state.grid.winner).toBe("");
   });
 });
