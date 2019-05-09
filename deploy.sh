@@ -1,6 +1,6 @@
 # delete branch gh-pages
-git push --delete origin gh-pages
-git branch -d gh-pages
+# git push --delete origin gh-pages
+# git branch -d gh-pages
 
 # recreate branch gh-pages
 git checkout -b gh-pages HEAD
