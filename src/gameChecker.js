@@ -1,7 +1,10 @@
+const firstHorizontalRow = (grid, sign) => grid[0] === sign && grid[1] === sign && grid[2] === sign
+const secondHorizontalRow = (grid, sign) => grid[3] === sign && grid[4] === sign && grid[5] === sign
+
 export default function gameChecker(grid) {
-  if (
-    (grid[0] === "X" && grid[1] === "X" && grid[2] === "X") || 
-    (grid[3] === "X" && grid[4] === "X" && grid[5] === "X")
+  if (firstHorizontalRow(grid, "X")
+    || 
+   secondHorizontalRow(grid, "X")
   ) {
     return "player1"
   }
