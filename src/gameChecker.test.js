@@ -56,4 +56,12 @@ describe('gameChecker should verify who is the winner', ()=>{
 
     expect(winner).toBe("player1");
   })
+
+  test('player1 wins with diagonal from right to left', ()=> {
+    const grid = ["1","2", "X", "O", "X", "6", "X", "8", "O" ];
+
+    const winner = gameChecker(grid);
+
+    expect(winner).toBe("player1");
+  })
 })
