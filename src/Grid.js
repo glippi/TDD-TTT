@@ -3,10 +3,10 @@ import { Cell } from './Cell'
 
 export class Grid extends Component {
   render() {
-    const { grid, signBoard } = this.props
+    const { grid, signBoard, className = "" } = this.props
 
     return (
-      <div className="w-25"> 
+      <div className={`w-20 ${className}`}> 
         <h1 className={`grid-wrapper`}>Tic Tac Toe</h1>
         <div className="flex flex-row flex-wrap justify-center items-centerr">
         {grid.map((value, index) => (
