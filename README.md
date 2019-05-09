@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/glippi/TDD-TTT.svg?branch=masterstyle=flat-square)](https://travis-ci.com/glippi/TDD-TTT)
+[![CircleCI](https://circleci.com/gh/glippi/TDD-TTT.svg?style=flat-square)](https://circleci.com/gh/glippi/TDD-TTT)
 
 <div align="center">
 <h1>TDD-TTT</h1>
