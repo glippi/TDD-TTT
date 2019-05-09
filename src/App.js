@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Header } from './Header'
 import { Grid } from './Grid'
 import { Player } from './Player'
 import gameChecker from './gameChecker'
@@ -36,9 +37,10 @@ export default class App extends Component {
     const { grid, actualPlayer, winner } = this.state
 
     return (
-      <div className="App flex flex-row items-center justify-center">
+      <div className="App flex flex-column items-center justify-center">
+        <Header />
         {winner
-          ? (<h1>{winner} wins!</h1>)
+          ? <h2 className="mv5 f3 fw4 ttu tracked">{`${winner} wins!`}</h2>
           : <Player whoIsPlaying={actualPlayer} />
         }
         <Grid grid={grid} signBoard={this.signBoard} className={`${winner ? "pointer-events-none" : ""}`} />
