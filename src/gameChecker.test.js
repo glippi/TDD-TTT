@@ -40,4 +40,12 @@ describe('gameChecker should verify who is the winner', ()=>{
 
     expect(winner).toBe("player1");
   })
+
+  test('player1 wins with third vertical row', ()=> {
+    const grid = ["1","2", "X", "O", "5", "X", "O", "8", "X" ];
+
+    const winner = gameChecker(grid);
+
+    expect(winner).toBe("player1");
+  })
 })
