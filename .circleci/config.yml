@@ -28,7 +28,7 @@ jobs:
 
       - run: yarn install
 
-      - run: sudo rm -rf ~/node_modules/babel-jest ~/node_modules/jest
+      - run: npm uninstall babel-jest@24.8.0 # sudo rm -rf ~/node_modules/babel-jest ~/node_modules/jest
 
       - save_cache:
           paths:
