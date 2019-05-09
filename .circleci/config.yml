@@ -28,6 +28,8 @@ jobs:
 
       - run: yarn install
 
+      - run: sudo rm -rf ~/node_modules/babel-jest ~/node_modules/jest
+
       - save_cache:
           paths:
             - node_modules
