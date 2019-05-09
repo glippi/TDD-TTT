@@ -4,7 +4,7 @@
     "checkJs": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": true,
