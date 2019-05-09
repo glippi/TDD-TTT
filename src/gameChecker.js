@@ -7,6 +7,7 @@ const secondVerticalRow = (grid, sign) => grid[1] === sign && grid[3] === sign &
 const thirdVerticalRow = (grid, sign) => grid[2] === sign && grid[5] === sign && grid[8] === sign
 
 const diagonalToRight = (grid, sign) => grid[0] === sign && grid[4] === sign && grid[8] === sign
+const diagonalToLeft = (grid, sign) => grid[2] === sign && grid[4] === sign && grid[6] === sign
 
 export default function gameChecker(grid) {
   if (firstHorizontalRow(grid, "X")
@@ -22,6 +23,8 @@ export default function gameChecker(grid) {
    thirdVerticalRow(grid, "X")
     || 
    diagonalToRight(grid, "X")
+    || 
+   diagonalToLeft(grid, "X")
   ) {
     return "player1"
   }
