@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/glippi/TDD-TTT.svg?style=flat-square)](https://circleci.com/gh/glippi/TDD-TTT)
+[![CircleCI](https://circleci.com/gh/glippi/TDD-TTT/tree/master.svg?style=svg)](https://circleci.com/gh/glippi/TDD-TTT/tree/master)
 
 <div align="center">
 <h1>TDD-TTT</h1>
