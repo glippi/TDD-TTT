@@ -34,12 +34,11 @@ export default class App extends Component {
 
   render() {
     const { grid, actualPlayer, winner } = this.state
-    console.log({ winner })
 
     return (
       <div className="App flex flex-row items-center justify-center">
         {winner
-          ? (<h1>{winner}</h1>)
+          ? (<h1>{winner} wins!</h1>)
           : <Player whoIsPlaying={actualPlayer} />
         }
         <Grid grid={grid} signBoard={this.signBoard} className={`${winner ? "pointer-events-none" : ""}`} />
