@@ -43,6 +43,19 @@ describe('App component should', () => {
     expect(player).toBeTruthy();
   });
 
+  test('render the winner', () => {
+    const app = create(<App />);
+    const instance = app.getInstance();
+    instance.setState({ winner : "player1"});
+
+    const displayWinner = app.toJSON().children[0];
+
+    expect(displayWinner).toHaveProperty('children', [
+    'player1',
+    ' wins!'
+    ]);
+  });
+
 });
 
 describe('Initial state of the App should', () => {
