@@ -31,6 +31,9 @@ export default class App extends Component {
     this.checkForWinner()
 
     if (!winner) this.changePlayer()
+    if (winner) {
+      this.setState({ actualPlayer: ""})
+    }
   }
 
   render() {
@@ -40,11 +43,17 @@ export default class App extends Component {
       <div className="App flex flex-column items-center justify-center">
         <Header />
         {winner
-          ? <h2 className="mv5 f3 fw4 ttu tracked">{`${winner} wins!`}</h2>
+        ? <h2 className="mv5 f3 fw4 ttu tracked">{`${winner} wins!`}</h2>
           : <Player whoIsPlaying={actualPlayer} />
         }
-        <Grid grid={grid} signBoard={this.signBoard} className={`${winner ? "pointer-events-none" : ""}`} />
+        <Grid grid={grid} signBoard={this.signBoard} winner={winner} actualPlayer={actualPlayer} className={`${winner ? "pointer-events-none" : ""}`} />
       </div>
     )
   }
 }
+// 10060
+// 11093
+// 127870
+// 128175
+// refresh 128260
+//<span className="f1">&#128588;</span>
