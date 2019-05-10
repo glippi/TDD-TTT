@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TDD-TTT/static/css/main.586eff90.chunk.css",
+    "main.js": "/TDD-TTT/static/js/main.5252927a.chunk.js",
+    "main.js.map": "/TDD-TTT/static/js/main.5252927a.chunk.js.map",
+    "runtime~main.js": "/TDD-TTT/static/js/runtime~main.20239f14.js",
+    "runtime~main.js.map": "/TDD-TTT/static/js/runtime~main.20239f14.js.map",
+    "static/css/2.31dafeb2.chunk.css": "/TDD-TTT/static/css/2.31dafeb2.chunk.css",
+    "static/js/2.abd0d98f.chunk.js": "/TDD-TTT/static/js/2.abd0d98f.chunk.js",
+    "static/js/2.abd0d98f.chunk.js.map": "/TDD-TTT/static/js/2.abd0d98f.chunk.js.map",
+    "index.html": "/TDD-TTT/index.html",
+    "precache-manifest.0a82e3f4eb72facbb9213eb25ea45fec.js": "/TDD-TTT/precache-manifest.0a82e3f4eb72facbb9213eb25ea45fec.js",
+    "service-worker.js": "/TDD-TTT/service-worker.js",
+    "static/css/2.31dafeb2.chunk.css.map": "/TDD-TTT/static/css/2.31dafeb2.chunk.css.map",
+    "static/css/main.586eff90.chunk.css.map": "/TDD-TTT/static/css/main.586eff90.chunk.css.map"
+  }
+}
