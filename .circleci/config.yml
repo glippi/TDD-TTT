@@ -38,6 +38,6 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: yarn build
+      - run: CI=false && yarn build
 
       - run: sh deploy.sh
