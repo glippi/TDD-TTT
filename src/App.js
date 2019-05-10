@@ -26,7 +26,7 @@ export default class App extends Component {
 
   signBoard = index => () => {
     const { actualPlayer, grid, winner } = this.state
-    const sign = actualPlayer === 'player1' ? 'X' : 'O'
+    const sign = actualPlayer === 'player1' ? '❌' : '⭕'
     grid.splice(index - 1, 1, sign)
     this.checkForWinner()
 
@@ -42,18 +42,9 @@ export default class App extends Component {
     return (
       <div className="App flex flex-column items-center justify-center">
         <Header />
-        {winner
-        ? <h2 className="mv5 f3 fw4 ttu tracked">{`${winner} wins!`}</h2>
-          : <Player whoIsPlaying={actualPlayer} />
-        }
+        <Player whoIsPlaying={actualPlayer} winner={winner} />
         <Grid grid={grid} signBoard={this.signBoard} winner={winner} actualPlayer={actualPlayer} className={`${winner ? "pointer-events-none" : ""}`} />
       </div>
     )
   }
 }
-// 10060
-// 11093
-// 127870
-// 128175
-// refresh 128260
-//<span className="f1">&#128588;</span>
