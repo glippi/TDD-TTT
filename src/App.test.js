@@ -23,6 +23,16 @@ describe('App component should', () => {
     unmountComponentAtNode(container);
   });
 
+  test('render the Header', () => {
+    act(() => {
+      render(<App />, container)
+    });
+
+    const header = container.querySelector('.header');
+
+    expect(header.textContent).toBe('Tic Tac Toe');
+  });
+
   test('render the Grid', () => {
     act(() => {
       render(<App />, container)
@@ -30,7 +40,7 @@ describe('App component should', () => {
 
     const grid = container.querySelector('.grid-wrapper');
 
-    expect(grid.textContent).toBe('Tic Tac Toe');
+    expect(grid.textContent).toBeTruthy();
   });
 
   test('render the Player', () => {
@@ -48,12 +58,9 @@ describe('App component should', () => {
     const instance = app.getInstance();
     instance.setState({ winner : "player1"});
 
-    const displayWinner = app.toJSON().children[0];
+    const displayWinner = app.toJSON().children[1].children[0];
 
-    expect(displayWinner).toHaveProperty('children', [
-    'player1',
-    ' wins!'
-    ]);
+    expect(displayWinner).toBe('player1 wins!')
   });
 
 });
