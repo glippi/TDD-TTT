@@ -2,7 +2,7 @@ import gameChecker from './gameChecker'
 
 describe('gameChecker should verify who is the winner', ()=>{
   test('player1 wins with first horizontal row', ()=> {
-    const grid = ["X","X", "X", "O", "X", "O", "O", "O", "X" ];
+    const grid = ["❌", "❌", "❌", "O", "❌", "O", "O", "O", "❌" ];
 
     const winner = gameChecker(grid);
 
@@ -10,7 +10,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with second horizontal row', ()=> {
-    const grid = ["X","O", "O", "X", "X", "X", "O", "8", "9" ];
+    const grid = ["❌", "O", "O", "❌", "❌", "❌", "O", "8", "9" ];
 
     const winner = gameChecker(grid);
 
@@ -18,7 +18,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with third horizontal row', ()=> {
-    const grid = ["1","2", "O", "4", "O", "6", "X", "X", "X" ];
+    const grid = ["1", "2", "O", "4", "O", "6", "❌", "❌", "❌" ];
 
     const winner = gameChecker(grid);
 
@@ -26,7 +26,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with first vertical row', ()=> {
-    const grid = ["X","X", "X", "O", "O", "6", "7", "8", "9" ];
+    const grid = ["❌", "❌", "❌", "O", "O", "6", "7", "8", "9" ];
 
     const winner = gameChecker(grid);
 
@@ -34,7 +34,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with second vertical row', ()=> {
-    const grid = ["O","X", "3", "X", "O", "X", "7", "8", "9" ];
+    const grid = ["O", "❌", "3", "❌", "O", "❌", "7", "8", "9" ];
 
     const winner = gameChecker(grid);
 
@@ -42,7 +42,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with third vertical row', ()=> {
-    const grid = ["1","2", "X", "O", "5", "X", "O", "8", "X" ];
+    const grid = ["1", "2", "❌", "O", "5", "❌", "O", "8", "❌" ];
 
     const winner = gameChecker(grid);
 
@@ -50,7 +50,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with diagonal from left to right', ()=> {
-    const grid = ["X","2", "O", "O", "X", "6", "7", "8", "X" ];
+    const grid = ["❌","2", "O", "O", "❌", "6", "7", "8", "❌" ];
 
     const winner = gameChecker(grid);
 
@@ -58,7 +58,7 @@ describe('gameChecker should verify who is the winner', ()=>{
   })
 
   test('player1 wins with diagonal from right to left', ()=> {
-    const grid = ["1","2", "X", "O", "X", "6", "X", "8", "O" ];
+    const grid = ["1","2", "❌", "O", "❌", "6", "❌", "8", "O" ];
 
     const winner = gameChecker(grid);
 
