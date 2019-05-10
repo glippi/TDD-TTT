@@ -10,22 +10,41 @@ const diagonalToRight = (grid, sign) => grid[0] === sign && grid[4] === sign && 
 const diagonalToLeft = (grid, sign) => grid[2] === sign && grid[4] === sign && grid[6] === sign
 
 export default function gameChecker(grid) {
-  if (firstHorizontalRow(grid, "X")
+  if (firstHorizontalRow(grid, "❌")
     || 
-   secondHorizontalRow(grid, "X")
+   secondHorizontalRow(grid, "❌")
     || 
-   thirdHorizontalRow(grid, "X")
+   thirdHorizontalRow(grid, "❌")
     || 
-   firstVerticalRow(grid, "X")
+   firstVerticalRow(grid, "❌")
     || 
-   secondVerticalRow(grid, "X")
+   secondVerticalRow(grid, "❌")
     || 
-   thirdVerticalRow(grid, "X")
+   thirdVerticalRow(grid, "❌")
     || 
-   diagonalToRight(grid, "X")
+   diagonalToRight(grid, "❌")
     || 
-   diagonalToLeft(grid, "X")
+   diagonalToLeft(grid, "❌")
   ) {
     return "player1"
   }
+  // if (firstHorizontalRow(grid, "⭕")
+  //   || 
+  //  secondHorizontalRow(grid, "⭕")
+  //   || 
+  //  thirdHorizontalRow(grid, "⭕")
+  //   || 
+  //  firstVerticalRow(grid, "⭕")
+  //   || 
+  //  secondVerticalRow(grid, "⭕")
+  //   || 
+  //  thirdVerticalRow(grid, "⭕")
+  //   || 
+  //  diagonalToRight(grid, "⭕")
+  //   || 
+  //  diagonalToLeft(grid, "⭕")
+  // ) {
+  //   return "player2"
+  // }
+  // return "It's a draft!"
 }
