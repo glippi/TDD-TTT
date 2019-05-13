@@ -1,7 +1,9 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
+import { create } from "react-test-renderer"
 import { act } from 'react-dom/test-utils'
 import { Player } from './Player'
+import App from './App';
 
 let container;
 
@@ -33,4 +35,13 @@ describe('Player component should', () => {
     expect(player.textContent).toBe('Player 1 moves');
   });
 
+  it('restart the game when clicked on restart icon', () => {
+    const app = create(<App />);
+    const instance = app.getInstance();
+    instance.setState({ winner : "player1"});
+
+    app.toJSON().children[1].children[1].props.onClick()
+
+    expect(instance.state.winner).toBe('');
+  });
 });
